@@ -1,0 +1,18 @@
+{
+  "name": "ems",
+  "version": "1.0.0",
+  "author": "Miraaj Kadam <miraajkadam@gmail.com> (https://twitter.com/miraajkadam)",
+  "description": "Just another Employee Management System",
+  "main": "index.js",
+  "homepage": "https://github.com/miraajkadam/EMS#readme",
+  "bugs": {
+    "url": "https://github.com/miraajkadam/EMS/issues",
+    "email": "miraajkadam@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miraajkadam/EMS.git"
+  },
+  "keywords": [],
+  "license": "(ISC OR MIT)"
+}
