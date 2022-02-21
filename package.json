@@ -14,5 +14,11 @@
     "url": "https://github.com/miraajkadam/EMS.git"
   },
   "keywords": [],
-  "license": "(ISC OR MIT)"
+  "license": "(ISC OR MIT)",
+  "scripts": {
+    "setup-server": "cd server && npm ci",
+    "build-server": "cd server && npm run build",
+    "setup-client": "cd client && npm ci",
+    "build-client": "cd client && npm run build"
+  }
 }
