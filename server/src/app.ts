@@ -1,11 +1,10 @@
-import express, { Application, Request, Response, NextFunction } from 'express';
+import 'dotenv/config';
+import express, { Application } from 'express';
+import { router as employeesRoutes } from './routes/employee';
+import startServer from './utils/startServer';
 
 const app: Application = express();
 
-app.get('/', (req: Request, res: Response, next: NextFunction) => {
-  res.send('hello');
-});
+app.use('/api/employees', employeesRoutes);
 
-app.listen(5000, () => {
-  console.log('Server running');
-});
+startServer(app, process.env.PORT);
