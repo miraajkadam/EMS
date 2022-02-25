@@ -1,0 +1,104 @@
+{
+  "employees": [
+    {
+      "name": "Lillian Towne",
+      "email": "Sarina26@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Eduardo Cummerata",
+      "email": "Hershel53@hotmail.com",
+      "id": 2
+    },
+    {
+      "name": "Gina Cronin",
+      "email": "Humberto.Quitzon@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Brenda Swaniawski I",
+      "email": "Magali72@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Franklin Davis",
+      "email": "Bianka36@yahoo.com",
+      "id": 5
+    },
+    {
+      "name": "Mr. Charlotte Price",
+      "email": "Gaylord.Kris54@yahoo.com",
+      "id": 6
+    },
+    {
+      "name": "Clarence Gleichner",
+      "email": "Macy8@yahoo.com",
+      "id": 7
+    },
+    {
+      "name": "Bryant Turcotte",
+      "email": "Matt.Kuvalis@hotmail.com",
+      "id": 8
+    },
+    {
+      "name": "Jackie Effertz",
+      "email": "Eleonore_MacGyver63@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "Lynda Kuvalis",
+      "email": "Lindsay17@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "Donna Doyle",
+      "email": "Derrick.Strosin@hotmail.com",
+      "id": 11
+    },
+    {
+      "name": "Loretta Lind",
+      "email": "Everett.Douglas46@gmail.com",
+      "id": 12
+    },
+    {
+      "name": "Diane Heidenreich",
+      "email": "Dovie.Olson@yahoo.com",
+      "id": 13
+    },
+    {
+      "name": "Robin Cormier",
+      "email": "Newell_Hahn@gmail.com",
+      "id": 14
+    },
+    {
+      "name": "Walter Greenholt",
+      "email": "Treva.Hills98@hotmail.com",
+      "id": 15
+    },
+    {
+      "name": "Lana Heaney",
+      "email": "Aaliyah.Wilderman@yahoo.com",
+      "id": 16
+    },
+    {
+      "name": "Andre Quitzon",
+      "email": "Linnie.Kerluke@hotmail.com",
+      "id": 17
+    },
+    {
+      "name": "June Bauch",
+      "email": "Zelda_Kunze@gmail.com",
+      "id": 18
+    },
+    {
+      "name": "Viola Medhurst IV",
+      "email": "Kristoffer_Reichert@yahoo.com",
+      "id": 19
+    },
+    {
+      "name": "Lynne Pouros",
+      "email": "Abel_Kiehn93@yahoo.com",
+      "id": 20
+    }
+  ]
+}
