@@ -1,5 +1,7 @@
-[{"id":1,"name":"Business Development","dept_id":5},
-{"id":2,"name":"Services","dept_id":3},
-{"id":3,"name":"Human Resources","dept_id":4},
-{"id":4,"name":"Support","dept_id":5},
-{"id":5,"name":"Services","dept_id":1}]
+[
+  { "id": 1, "name": "Business Development" },
+  { "id": 2, "name": "Services" },
+  { "id": 3, "name": "Human Resources" },
+  { "id": 4, "name": "Support" },
+  { "id": 5, "name": "Services" }
+]
