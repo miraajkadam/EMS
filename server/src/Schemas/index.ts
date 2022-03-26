@@ -1,6 +1,6 @@
-import { GraphQLInt, GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
-import FakeEmployeeData from '../db/FAKE_EMPLOYEES.json';
-import EmployeeType from './TypeDefs/EmployeeType';
+import { GraphQLInt, GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql'
+import FakeEmployeeData from '../db/FAKE_EMPLOYEES.json'
+import EmployeeType from './TypeDefs/EmployeeType'
 
 const RootQuery: GraphQLObjectType<any, any> = new GraphQLObjectType({
   name: 'RootQueryType',
@@ -9,11 +9,11 @@ const RootQuery: GraphQLObjectType<any, any> = new GraphQLObjectType({
       type: new GraphQLList(EmployeeType),
       args: { id: { type: GraphQLInt } },
       resolve(parent, args) {
-        return FakeEmployeeData;
+        return FakeEmployeeData
       },
     },
   },
-});
+})
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
@@ -29,14 +29,14 @@ const Mutation = new GraphQLObjectType({
           id: FakeEmployeeData.length + 1,
           name: args.name,
           email: args.email,
-        });
+        })
 
-        return args;
+        return args
       },
     },
   },
-});
+})
 
-const schema = new GraphQLSchema({ query: RootQuery, mutation: Mutation });
+const schema = new GraphQLSchema({ query: RootQuery, mutation: Mutation })
 
-export default schema;
+export default schema
