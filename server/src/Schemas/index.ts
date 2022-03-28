@@ -14,12 +14,30 @@ const RootQuery: GraphQLObjectType<any, any> = new GraphQLObjectType({
       },
     },
 
-    // getAllDepartments: {
-    //   type: new GraphQLList(DepartmentType),
-    //   resolve(parent, args) {
-    //     return Department.find({})
-    //   },
+    getAllDepartments: {
+      type: new GraphQLList(DepartmentType),
+      resolve(parent, args) {
+        return Department.find({})
+      },
+    },
+
+    // getEmployeeById: {
+    //   type: new GraphQLObjectType()
     // },
+
+    employees: {
+      type: new GraphQLList(EmployeeType),
+      resolve: () => {
+        return Employee.find({})
+      },
+    },
+
+    departments: {
+      type: new GraphQLList(DepartmentType),
+      resolve: () => {
+        return Department.find({})
+      },
+    },
   },
 })
 
