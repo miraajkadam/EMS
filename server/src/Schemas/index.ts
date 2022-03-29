@@ -1,41 +1,33 @@
-import { GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql'
+import { GraphQLID, GraphQLList, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql'
+import { EmployeeType } from '../..'
 import Department from '../models/Department'
 import Employee from '../models/Employee'
-import DepartmentType from './TypeDefs/DepartmentType'
-import EmployeeType from './TypeDefs/EmployeeType'
+import { default as DepartmentTypeGQL } from './TypeDefs/DepartmentType'
+import { default as EmployeeTypeGQL } from './TypeDefs/EmployeeType'
 
 const RootQuery: GraphQLObjectType<any, any> = new GraphQLObjectType({
   name: 'RootQueryType',
   fields: {
-    getAllEmployees: {
-      type: new GraphQLList(EmployeeType),
-      resolve(parent, args) {
-        return Employee.find({})
-      },
-    },
-
-    getAllDepartments: {
-      type: new GraphQLList(DepartmentType),
-      resolve(parent, args) {
-        return Department.find({})
-      },
-    },
-
-    // getEmployeeById: {
-    //   type: new GraphQLObjectType()
-    // },
-
     employees: {
-      type: new GraphQLList(EmployeeType),
+      type: new GraphQLList(EmployeeTypeGQL),
       resolve: () => {
         return Employee.find({})
       },
     },
 
     departments: {
-      type: new GraphQLList(DepartmentType),
+      type: new GraphQLList(DepartmentTypeGQL),
       resolve: () => {
         return Department.find({})
+      },
+    },
+
+    employee: {
+      type: EmployeeTypeGQL,
+      args: { id: { type: GraphQLID } },
+      resolve: async (parent, args: Pick<EmployeeType, 'id'>) => {
+        const employee = await Employee.findById(args.id)
+        return employee
       },
     },
   },
@@ -45,17 +37,12 @@ const Mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
     createEmployee: {
-      type: EmployeeType,
+      type: EmployeeTypeGQL,
       args: {
         name: { type: GraphQLString },
         email: { type: GraphQLString },
       },
       resolve: async (parent: any, args: any) => {
-        // FakeEmployeeData.push({
-        //   id: FakeEmployeeData.length + 1,
-        //   name: args.name,
-        //   email: args.email,
-        // })
         const newEmployee = new Employee({ name: args.name, email: args.email })
         const response = await newEmployee.save()
 
@@ -64,7 +51,7 @@ const Mutation = new GraphQLObjectType({
     },
 
     createDepartment: {
-      type: DepartmentType,
+      type: DepartmentTypeGQL,
       args: {
         name: { type: GraphQLString },
       },
